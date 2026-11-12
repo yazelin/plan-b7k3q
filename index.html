@@ -193,8 +193,13 @@ details[open] summary::before{transform:rotate(45deg)}
   <p>你本來就一直在問 AI，卡住的原因我覺得有兩個。一個是問的對象就是動手做的那個 Codex，它會替自己做過的事辯護。另一個是它回答之後，你手上沒有辦法驗證。所以每一天都分三塊：帶你做一遍、說明背後的觀念、留一題你自己做。</p>
 
   <div class="day">
-    <div class="head"><div class="badge pre">上課<br>前</div><h3>先開一個分身，確認啟動流程是好的</h3></div>
-    <p>你自己跟 Codex 做，我遠端看。用 11/03 那份舊備份，在另一個埠號 5202 開一個分身出來。這一步完全不碰正式服務。</p>
+    <div class="head"><div class="badge pre">上課<br>前</div><h3>三件事你先自己做，我遠端看</h3></div>
+    <ul>
+      <li><b>開一個分身。</b>用 11/03 那份舊備份，在另一個埠號 5202 開起來，確認啟動流程是好的。這一步完全不碰正式服務。</li>
+      <li><b>把給 AI 的規則刪到一頁。</b>現在那份有 25 KB，10 個關卡和 260 個檔案鎖都是 AI 照它做出來的。我會先給你一頁的範本。</li>
+      <li><b>在 Codex 裝上 superpowers 這套流程外掛。</b>它有三個功能我們不用，寫進規則裡：每個功能另開一個工作區、同時派多個 AI、平行分工。之前硬碟滿和 Token 燒掉，跟這類做法有關。</li>
+    </ul>
+    <p>哪一件卡住都沒關係，第一天上課先處理它。</p>
     <div class="flow"><span>正式 5201</span><i>照常營業，不動</i></div>
     <div class="flow"><span>分身 5202</span><i>用舊備份開，拿來測試</i></div>
   </div>
@@ -205,15 +210,13 @@ details[open] summary::before{transform:rotate(45deg)}
     <ul class="done">
       <li>一份還原成功過的備份，兩個風險都解掉。</li>
       <li>一個開在乾淨新資料夾的 2.0 分身。</li>
-      <li>一頁給 AI 看的規則。</li>
+      <li>一張自己看得懂的系統地圖。</li>
     </ul>
     <details>
       <summary>展開這天的細節</summary>
       <div class="flow"><span>網址</span><i>→</i><span>Cloudflare 通道</span><i>→</i><span>那台 Mac</span><i>→</i><span>程式</span><i>→</i><span>資料庫</span></div>
       <div class="cols">
         <div class="col a"><h4>帶你做</h4><ul>
-          <li>先把專案裡給 AI 看的那份規則刪到一頁以內。現在那份有 25 KB，10 個關卡和 260 個檔案鎖都是 AI 照它做出來的。之後的事都在新規則底下做。</li>
-          <li>規則刪完後，在 Codex 裝上 superpowers 這套流程外掛。它有三個功能我們不用，寫進規則裡：每個功能另開一個工作區、同時派多個 AI、平行分工。之前硬碟滿和 Token 燒掉，跟這類做法有關。</li>
           <li>畫一張系統地圖：網址怎麼連到那台 Mac、哪個程式在跑、資料庫放在哪個資料夾、哪些是歷史資料。</li>
           <li>把系統地圖和那一頁規則放進專屬問答助手。之後系統改版，你自己更新這份地圖，助手講的才不會過期。</li>
           <li>挑一個沒人用的時段，把正式服務停一兩分鐘，拷貝資料庫，馬上開回來。</li>
