@@ -72,6 +72,9 @@ h2 em{font-style:normal;display:block;font-size:14px;color:var(--brand);letter-s
   .row .arr{display:none}
 }
 
+.why .from::before{content:"這次的原因"}
+.why .to::before{content:"之後的做法";opacity:1}
+.env b small{display:block;font-size:13px;color:var(--sub);font-weight:400}
 .goal{font-size:19px;line-height:1.6;background:var(--brandbg);border-radius:14px;padding:18px 20px;font-weight:700}
 
 .how{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:16px 0}
@@ -117,7 +120,7 @@ details[open] summary::before{transform:rotate(45deg)}
   <header class="hero"><div class="in">
     <small>為你的系統訂做的一對一課程</small>
     <h1>系統接下來怎麼走</h1>
-    <p>兩週，把系統整理成你自己顧得住的樣子，也把「怎麼問 AI、怎麼判斷 AI」練起來。</p>
+    <p>兩週，把開發環境重新建好，把之後用 AI 開發的流程定下來，也把「怎麼問 AI、怎麼判斷 AI」練起來。</p>
     <div class="chips"><span><b>2</b> 週</span><span><b>3</b> 天實體，每天約 4 小時</span><span>兩週內隨時線上問</span><span><b>36,000</b> 元</span></div>
   </div></header>
 
@@ -153,11 +156,31 @@ details[open] summary::before{transform:rotate(45deg)}
   <div class="ba">
     <div class="row"><h3>備份</h3><div class="pair"><span class="from">最新一份是 11/03 的</span><span class="arr">→</span><span class="to">每晚自動、加密，而且還原成功過</span></div></div>
     <div class="row"><h3>重啟</h3><div class="pair"><span class="from">沒有真的試過</span><span class="arr">→</span><span class="to">停過、開過，知道怎麼開回來</span></div></div>
-    <div class="row"><h3>給 AI 的規則</h3><div class="pair"><span class="from">25 KB，做出 10 個關卡和 260 個檔案鎖</span><span class="arr">→</span><span class="to">一頁</span></div></div>
     <div class="row"><h3>專案資料夾</h3><div class="pair"><span class="from">程式、資料、歷史紀錄混在一起</span><span class="arr">→</span><span class="to">乾淨的 2.0，舊的整包封存</span></div></div>
-    <div class="row"><h3>加新功能</h3><div class="pair"><span class="from">AI 說通過就算通過</span><span class="arr">→</span><span class="to">自動測試跑過，你自己再點一次</span></div></div>
-    <div class="row"><h3>遇到不懂的</h3><div class="pair"><span class="from">問動手做的那個 AI</span><span class="arr">→</span><span class="to">問第二個 AI，用三個問題自己判斷</span></div></div>
   </div>
+
+  <h2><em>你問的事</em>之後怎麼開發，才不會再發生</h2>
+  <p>這次會卡住，我整理出六個原因。每一個在新的開發環境裡都有對應的做法，兩週內一項一項建起來。</p>
+  <div class="ba">
+    <div class="row why"><h3>給 AI 的要求</h3><div class="pair"><span class="from">要求「絕對安全、不能出錯」，AI 就一直加關卡和鎖</span><span class="arr">→</span><span class="to">一頁規則，寫明這是 50 人的內部系統、可以停機一分鐘、不准自己加關卡</span></div></div>
+    <div class="row why"><h3>正式和開發</h3><div class="pair"><span class="from">在同一個資料夾裡改、測、跑正式</span><span class="arr">→</span><span class="to">分成三個地方，正式區只跑不改</span></div></div>
+    <div class="row why"><h3>工作區</h3><div class="pair"><span class="from">每個功能另開一份工作區和資料庫副本，累積到兩百多 GB</span><span class="arr">→</span><span class="to">一條線、一個開發區，測試資料用完就丟</span></div></div>
+    <div class="row why"><h3>驗收</h3><div class="pair"><span class="from">AI 自己說通過</span><span class="arr">→</span><span class="to">自動測試跑過，你自己再點一次</span></div></div>
+    <div class="row why"><h3>版本</h3><div class="pair"><span class="from">散在 64 個工作區裡，分不清哪一份是正式的</span><span class="arr">→</span><span class="to">收成一條線，推到 GitHub 私人倉庫，改壞了退得回去</span></div></div>
+    <div class="row why"><h3>問誰</h3><div class="pair"><span class="from">問動手做的那個 AI，它說不能動就不敢動</span><span class="arr">→</span><span class="to">問專屬問答助手，再用三個問題自己判斷</span></div></div>
+  </div>
+
+  <p style="margin-top:22px"><b>建好之後，那台 Mac 上會是這三個地方：</b></p>
+  <div class="how env">
+    <div><b>正式區<small>埠號 5201</small></b>大家每天在用的。只跑，不在這裡改任何程式。</div>
+    <div><b>開發區<small>埠號 5202</small></b>AI 只准在這裡動手。資料是正式的副本，弄壞了重拷一份就好。</div>
+    <div><b>備份<small>外接 SSD，加密</small></b>每晚自動拷一份正式資料庫，只留最近兩週。</div>
+  </div>
+
+  <p><b>之後每加一個功能，都走同一條路：</b></p>
+  <div class="flow"><span>跟 AI 談清楚需求</span><i>→</i><span>AI 在開發區做</span><i>→</i><span>跑自動測試</span><i>→</i><span>你自己點一次</span><i>→</i><span>存檔推上 GitHub</span><i>→</i><span>更新正式區</span></div>
+
+  <div class="note" style="margin-top:18px"><b>每週五分鐘體檢。</b>看三個數字：硬碟剩多少、最近一次備份是哪一天、專案資料夾有沒有多出不認得的目錄。這次是硬碟快滿了才發現，有了體檢，開始累積的第一週就會看到。</div>
 
   <h2><em>做法</em>兩週怎麼進行</h2>
   <p class="goal">目標：之後遇到新狀況，可以自己問 AI 學會、自己判斷 AI 的回答能不能信，不用再找我。</p>
@@ -165,7 +188,7 @@ details[open] summary::before{transform:rotate(45deg)}
     <div><b>兩週內三天實體</b>每天約四小時，在那台 Mac 前面一起做。大約排在第 1 天、第 4 到 5 天、第 9 到 10 天。</div>
     <div><b>其他時間線上問</b>兩週內有問題就用訊息問我，我當天或隔天回。最後一天上完還有四五天，剛好觀察 2.0。</div>
     <div><b>每次留一題</b>上完留一題讓你自己問 AI 做完，下次見面先看這一題。</div>
-    <div><b>一個專屬問答助手</b>在你自己的 AI 帳號裡建一個專案，放進你的系統地圖、那一頁規則和講義。平常先問它，它答不了的再問我。兩週結束後它還在。</div>
+    <div><b>一個專屬問答助手</b>在你的 ChatGPT 裡建一個專案，放進你的系統地圖、那一頁規則和講義。平常先問它，它答不了的再問我。兩週結束後它還在。</div>
   </div>
   <p>你本來就一直在問 AI，卡住的原因我覺得有兩個。一個是問的對象就是動手做的那個 Codex，它會替自己做過的事辯護。另一個是它回答之後，你手上沒有辦法驗證。所以每一天都分三塊：帶你做一遍、說明背後的觀念、留一題你自己做。</p>
 
@@ -253,6 +276,7 @@ details[open] summary::before{transform:rotate(45deg)}
           <li>把 2.0 切換成正式：舊的停掉，2.0 接手 5201，舊的整包封存。</li>
           <li>挑一個你本來就想加的小功能，走完上面整個流程。</li>
           <li>把每晚備份改成自動、加密、只留最近兩週。</li>
+          <li>做一支每週體檢：硬碟剩多少、最近一次備份的日期、有沒有多出不認得的目錄。</li>
           <li>檢查網路線、休眠設定這些硬體面的事。</li>
         </ul></div>
         <div class="col b"><h4>我會說明</h4><ul>
