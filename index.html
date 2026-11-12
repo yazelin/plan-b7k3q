@@ -106,6 +106,12 @@ details[open] summary::before{transform:rotate(45deg)}
 .col.b{background:var(--goldbg)} .col.b h4{color:var(--gold)}
 .col.c{background:var(--cbg)} .col.c h4{color:var(--c)}
 
+.gl{padding:6px 20px}
+.gl details{margin:0;border:0;padding:0}
+.gl summary small{font-weight:400;color:var(--sub);margin-left:auto;font-size:13px}
+dl{margin:0 0 12px}
+dt{font-weight:700;margin-top:12px}
+dd{margin:2px 0 0;color:var(--sub)}
 .price{background:linear-gradient(135deg,var(--hero1),var(--hero2));color:var(--heroink);
   border-radius:16px;padding:24px 22px;margin:14px 0}
 .price .big{font-size:clamp(38px,11vw,54px);font-weight:800;line-height:1.1}
@@ -296,6 +302,12 @@ details[open] summary::before{transform:rotate(45deg)}
 
   <p>每天我會先準備好當天的講義，上完留給你。正式那台 Mac 上的指令都由你自己按。</p>
 
+<h2><em>基本觀念</em>會一起補上的名詞</h2>
+  <p>下面這些詞在三天裡都會碰到。每一個我會用你的系統當例子講一次，也會整理成一張小抄放進問答助手，之後看到不懂的可以直接問它。</p>
+  <div class="day gl"><details><summary>系統怎麼跑起來的<small>第一天，7 個</small></summary><dl><dt>終端機</dt><dd>用打字下指令的視窗。AI 幫你操作電腦，就是在這裡打字。</dd><dt>程序</dt><dd>一個正在跑的程式。把服務停掉，就是結束這個程序。</dd><dt>埠號</dt><dd>同一台電腦上每個服務的門牌號碼。5201 是正式區，5202 是開發區。</dd><dt>資料庫</dt><dd>存大家填的資料的地方。程式壞了可以重裝，資料庫沒了就救不回來。</dd><dt>設定檔</dt><dd>放密碼、金鑰和資料夾位置的檔案，檔名常叫 .env。不能外流，也不放上 GitHub。</dd><dt>Cloudflare 通道</dt><dd>把網址接到那台 Mac 的一條線，外面的人才連得進來。</dd><dt>備份和還原</dt><dd>備份是拷一份出來，還原是拿那一份把系統開起來。兩個都做過才算數。</dd></dl></details></div>
+  <div class="day gl"><details><summary>版本管理和驗收<small>第二天，6 個</small></summary><dl><dt>Git</dt><dd>程式碼的存檔紀錄。每次存檔都留著，隨時可以回到任何一次。</dd><dt>存檔點（commit）</dt><dd>一次存檔，附一句話說明這次改了什麼。</dd><dt>分支（branch）</dt><dd>從某個存檔點分出去的另一條線。在上面改壞了，主線不受影響。</dd><dt>工作區（worktree）</dt><dd>同一份程式碼在電腦上多開一個資料夾。這次的 64 個就是這個。</dd><dt>GitHub</dt><dd>把存檔紀錄多放一份到雲端的地方。那台 Mac 壞了，程式碼還在。</dd><dt>自動測試</dt><dd>一批會自己檢查程式行為的小程式。改完跑一次，就知道有沒有弄壞別的地方。</dd></dl></details></div>
+  <div class="day gl"><details><summary>跟 AI 一起開發<small>第三天，5 個</small></summary><dl><dt>給 AI 的規則</dt><dd>AI 每次開工都會先讀的檔案，檔名是 AGENTS.md。寫什麼它就照做。</dd><dt>流程外掛（skill）</dt><dd>裝給 AI 的做事步驟，例如先問清楚需求再動手。superpowers 是其中一套。</dd><dt>規格</dt><dd>動手前先寫下要做什麼、做到怎樣算完成。</dd><dt>驗收</dt><dd>做完之後確認真的有做到規格寫的事。</dd><dt>Token</dt><dd>AI 讀和寫的字數，也是計費的單位。來回越多次、貼的內容越長，花得越多。</dd></dl></details></div>
+
   <h2><em>費用</em>兩週合計</h2>
   <div class="price">
     <div class="big">36,000<small>元</small></div>
@@ -303,7 +315,7 @@ details[open] summary::before{transform:rotate(45deg)}
       <li>三天實體，每天約四小時</li>
       <li>兩週內線上提問</li>
       <li>一個放了你系統資料的專屬問答助手</li>
-      <li>三份照你的系統寫的講義</li>
+      <li>三份照你的系統寫的講義，和一張名詞小抄</li>
       <li>上課前那一步的遠端協助</li>
     </ul>
   </div>
